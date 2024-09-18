@@ -1,11 +1,11 @@
 ---
 title: 'Training'
-sidebar_position: 4
+# sidebar_position: 4
 ---
 # <span style="font-size: 2.5rem; font-weight: bold; color: #333;">Training</span>
 <br />
-<div style="display: flex; flex-direction: row;">
-  <div style="flex: 3; padding-right: 20px;">
+<div>
+  <div>
     
     <h2 id="prepare-required-checkpoints" style="font-size: 2rem; font-weight: bold;">Prepare Required Checkpoints</h2>
 
@@ -40,8 +40,8 @@ sidebar_position: 4
       Organize the pretrained weights as below:
     </p>
 
-    <div style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
-      <pre style="margin: 0;">
+<div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1rem;">
+  <pre style="margin: 0; color: #333;">
 model_zoo
 ├── vicuna_ckpt
 │   ├── 13b_v0          
@@ -57,10 +57,14 @@ model_zoo
         <strong>2D Models Training</strong>
         <div style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
           <pre style="margin: 0;">
+<code>
+```bash
 cd src
 sh tools/LAMM/train_lamm2d.sh lamm_2d
 # or
-sh tools/LAMM/train_lamm2d_slurm.sh &lt;YOUR_PARTITION&gt; lamm_2d
+sh tools/LAMM/train_lamm2d_slurm.sh <YOUR_PARTITION> lamm_2d
+```
+</code>
           </pre>
         </div>
       </li>
@@ -68,10 +72,14 @@ sh tools/LAMM/train_lamm2d_slurm.sh &lt;YOUR_PARTITION&gt; lamm_2d
         <strong>3D Models Training</strong>
         <div style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
           <pre style="margin: 0;">
+<code>
+```bash
 cd src
 sh tools/LAMM/train_lamm3d.sh lamm_3d
 # or
-sh tools/LAMM/train_lamm3d_slurm.sh &lt;YOUR_PARTITION&gt; lamm_3d
+sh tools/LAMM/train_lamm3d_slurm.sh <YOUR_PARTITION> lamm_3d
+```
+</code>
           </pre>
         </div>
       </li>
@@ -120,9 +128,14 @@ sh tools/LAMM/train_lamm3d_slurm.sh &lt;YOUR_PARTITION&gt; lamm_3d
         <strong>Image modality only</strong>
         <div style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
           <pre style="margin: 0;">
+
+<code>
+```bash
 cd src
-sh tools/Octavius/train_octavius_slurm.sh &lt;YOUR_PARTITION&gt; &lt;NUM_GPU&gt; \
+sh tools/Octavius/train_octavius_slurm.sh <YOUR_PARTITION>  <NUM_GPU> \
     config/Octavius/octavius_2d_e4_bs64.yaml octavius_2d_e4_bs64
+```
+</code>
           </pre>
         </div>
       </li>
@@ -130,9 +143,14 @@ sh tools/Octavius/train_octavius_slurm.sh &lt;YOUR_PARTITION&gt; &lt;NUM_GPU&gt;
         <strong>Point cloud modality only</strong>
         <div style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
           <pre style="margin: 0;">
+
+<code>
+```bash
 cd src
-sh tools/Octavius/train_octavius_slurm.sh &lt;YOUR_PARTITION&gt; &lt;NUM_GPU&gt; \
+sh tools/Octavius/train_octavius_slurm.sh <YOUR_PARTITION>  <NUM_GPU> \
     config/Octavius/octavius_3d_e3_bs64.yaml octavius_3d_e3_bs64
+```
+</code>
           </pre>
         </div>
       </li>
@@ -140,9 +158,13 @@ sh tools/Octavius/train_octavius_slurm.sh &lt;YOUR_PARTITION&gt; &lt;NUM_GPU&gt;
         <strong>Image & point cloud modality joint</strong>
         <div style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
           <pre style="margin: 0;">
+<code>
+```bash
 cd src
-sh tools/Octavius/train_octavius_slurm.sh &lt;YOUR_PARTITION&gt; &lt;NUM_GPU&gt; \
+sh tools/Octavius/train_octavius_slurm.sh <YOUR_PARTITION>  <NUM_GPU> \
     config/Octavius/octavius_2d+3d_e6_bs64.yaml octavius_2d+3d_e6_bs64
+```
+</code>
           </pre>
         </div>
       </li>
@@ -259,16 +281,6 @@ sh tools/Octavius/train_octavius_slurm.sh &lt;YOUR_PARTITION&gt; &lt;NUM_GPU&gt;
     <p style="font-size: 1.25rem; margin-top: 2rem;">
       You can download them and put them into the <code>ckpt</code> directory for fast evaluation.
     </p>
-  </div>
-  <div style="flex: 1; padding-left: 20px;">
-    <div style="position: sticky; top: 100px;">
-      <a href="#prepare-required-checkpoints" style="display: block; margin-bottom: 8px; color: #007bff; text-decoration: none;">Prepare Required Checkpoints</a>
-      <a href="#lamm" style="display: block; margin-bottom: 8px; color: #007bff; text-decoration: none;">LAMM</a>
-      <a href="#octavius" style="display: block; margin-bottom: 8px; color: #007bff; text-decoration: none;">Octavius</a>
-      <a href="#model-zoo" style="display: block; margin-bottom: 8px; color: #007bff; text-decoration: none;">Model Zoo</a>
-      <a href="#lamm-model-zoo" style="display: block; margin-bottom: 8px; color: #007bff; text-decoration: none;">LAMM Model Zoo</a>
-      <a href="#octavius-model-zoo" style="display: block; margin-bottom: 8px; color: #007bff; text-decoration: none;">Octavius Model Zoo</a>
-    </div>
   </div>
   
 </div>

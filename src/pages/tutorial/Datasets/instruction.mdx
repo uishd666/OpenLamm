@@ -2,67 +2,259 @@
 title: 'Instruction Tuning'
 sidebar_position: 1
 ---
-
+# <span style="font-size: 2.5rem; font-weight: bold; color: #333;" class="leading-loose">Instruction Tuning</span>
+<p class="leading-loose">
 We construct instruction tuning dataset for 2D/3D modality instruction tuning via GPT API.
+</p>
+<br />
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">2D Instruction Tuning Datasets</span>
+<br />
 
-## 2D Instruction Tuning Datasets
-
-2D instruction tuning datasets are build on [MS-COCO](https://cocodataset.org), [Bamboo](https://github.com/ZhangYuanhan-AI/Bamboo), [Locount](https://isrc.iscas.ac.cn/gitlab/research/locount-dataset) and [TextVQA](https://textvqa.org) dataset. You can download them from [here](https://opendatalab.com/LAMM/LAMM/tree/main/raw/2D_Instruct).
-
+<p class="leading-loose" style="font-size: 1.25rem;">
+2D instruction tuning datasets are build on <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://cocodataset.org" target="_blank" >MS-COCO</a>, <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://github.com/ZhangYuanhan-AI/Bamboo" target="_blank" >Bamboo</a>, <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://isrc.iscas.ac.cn/gitlab/research/locount-dataset" target="_blank" >Locount</a> and <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://textvqa.org" target="_blank" >TextVQA</a> dataset. You can download them from <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://opendatalab.com/LAMM/LAMM/tree/main/raw/2D_Instruct" target="_blank" >here</a>.
+</p>
+<p class="leading-loose" style="font-size: 1.25rem;">
 The generated instruction-following dialogues are organized into the following meta files. We provide a table to illustrate the correspondence between each meta file and data collection:
+</p>
 
-|  Meta file name  | Size  |  Data file name |  Size |  
-|  ----  | ----  |  ----  | ---- |   
-| [daily_dialogue_49k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/daily_dialogue_49k.json)  | 112M | coco_images.zip | 7.8G |   
-| [detailed_description_49k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/detailed_description_49k.json)  | 65.5M |  coco_images.zip | 7.8G |    
-| [factual_knowledge_dialogue_42k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/factual_knowledge_dialogue_42k.json) | 83.2M | bamboo_images.zip | 5.4G |  
-| [vision_task_dialogue_46k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/vision_task_dialogue_46k.json) | 64.8M | coco_images.zip, bamboo_images.zip, locount_images.zip, textvqa_images.zip | 9.2G |
-| [LAMM_instruct_186k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/LAMM_instruct_186k.json) | 325M | - | - |
 
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/daily_dialogue_49k.json">
+            daily_dialogue_49k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            112M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            coco_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            7.8G
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/detailed_description_49k.json">
+            detailed_description_49k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            83.2M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            bamboo_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            5.4G
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/vision_task_dialogue_46k.json">
+            vision_task_dialogue_46k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            64.8M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            coco_images.zip, bamboo_images.zip, locount_images.zip, textvqa_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            9.2G
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Instruct/meta_file/LAMM_instruct_186k.json">
+            LAMM_instruct_186k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            325M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            /
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            /
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br />
+
+<p class="leading-loose" style="font-size: 1.25rem;">
 Note that we provide a `LAMM_instruct_186k.json` meta file to merge all the dataset across different tasks. You can just use this file for training.
+</p>
 
-#### Additional Detection Instruction
+<br />
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;" class="leading-loose">Additional Detection Instruction</span>
 
+<br />
+<p class="leading-loose" style="font-size: 1.25rem;">
 The lack of sufficient detection instructions results in poor performance on downstream PASCAL VOC evaluation. To overcome this problem, we leverage entire COCO detection annotations to generate instructions, and add them into the aforementioned datasets as supplementation.
+</p>
+<br />
 
-|  Meta file name  | Size  |  Data file name |  Size |  
-    |  ----  | ----  |  ----  | ---- |   
-    | [coco_detection_117k.json](https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_2D/meta_file)  | 116M | coco_images.zip | 7.8G |   
-    | [octavius_2d_train_293k.json](https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_2D/meta_file)  | 399M | - | - |
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_2D/meta_file">
+            coco_detection_117k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            116M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            coco_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            7.8G
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_2D/meta_file">
+            octavius_2d_train_293k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            339M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            /
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            /
+        </td>
+    </tr>
+    </tbody>
+</table>
 
-Note that we provide a `octavius_2d_train_293k.json` meta file to merge all the dataset across different tasks. You can just use this file for training.
+<p class="leading-loose" style="font-size: 1.25rem;">
+Note that we provide a `LAMM_instruct_186k.json` meta file to merge all the dataset across different tasks. You can just use this file for training.
+</p>
 
-## 3D Instruction Tuning Datasets
+<br />
 
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">3D Instruction Tuning Datasets</span>
+<br />
+<p class="leading-loose" style="font-size: 1.25rem;">
 We provide two 3D instruction tuning datasets, "Scan2Inst" and "LAMM3D-Dataset", for 3D instruction tuning.
+</p>
+<br />
 
-#### Scan2Inst
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Scan2Inst</span>
+<br />
+<strong>
+Note: Compared with LAMM3D-Dataset, Scan2Inst provide more tasks and instruction-following dialogues, therefore we highly recommend you use Scan2Inst rather than LAMM3D-Dataset for 3D instruction tuning.
+</strong>
+<br />
 
-**Note: Compared with LAMM3D-Dataset, Scan2Inst provide more tasks and instruction-following dialogues, therefore we highly recommend you use Scan2Inst rather than LAMM3D-Dataset for 3D instruction tuning.**
+<p class="leading-loose">Scan2Inst is build on <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="http://www.scan-net.org" target="_blank">ScanNet</a>. Specifically, we first use FCAF3D from <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://github.com/open-mmlab/mmdetection" target="_blank">mmdetection3d</a> to extract 3d object given a scene level point cloud. Then a ULIP-like encoder is used to extract linguistic-aligned object level 3d feature. In the end, to speed up the data loading process, we store the dataset to a pickle file. For convincely, we provide a processed pickle file (scan2inst_train.pickle) <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_3D/3D_Instruct/meta_file" target="_blank">here</a>, you can train our model by just loading this file.</p>
 
-Scan2Inst is build on [ScanNet](http://www.scan-net.org). Specifically, we first use FCAF3D from [mmdetection3d](https://github.com/open-mmlab/mmdetection) to extract 3d object given a scene level point cloud. Then a ULIP-like encoder is used to extract linguistic-aligned object level 3d feature. In the end, to speed up the data loading process, we store the dataset to a pickle file. For convincely, we provide a processed pickle file (scan2inst_train.pickle) [here](https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_3D/3D_Instruct/meta_file), you can train our model by just loading this file.
-
-Besides, if you want to utilize your own dataset, we also provide our ULIP model pretraining code, you can train your own ULIP model by following the instructions from `src/tools/Octavius/ULIP/scripts/pretrain_pointbert.sh`. You can also use our pretrained model [Here](https://drive.google.com/file/d/1-0Z3Q3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing) to extract your own dataset.
-
+<p class="leading-loose mt-2">Besides, if you want to utilize your own dataset, we also provide our ULIP model pretraining code, you can train your own ULIP model by following the instructions from `src/tools/Octavius/ULIP/scripts/pretrain_pointbert.sh`. You can also use our pretrained model <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://drive.google.com/file/d/1-0Z3Q3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing" target="_blank">Here</a> to extract your own dataset.</p>
+<br />
+<pre>
 Corresponding meta file is here:
+</pre>
+<br />
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_3D/3D_Instruct/meta_file">
+            scan2inst_train.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            62.3M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            scan2inst_train.pickle
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            209M
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br />
 
-|  Meta file name  | Size  |  Data file name  | Size  |  
-|  ----  | ----  | ----  | ----  | 
-|  [scan2inst_train.json](https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_3D/3D_Instruct/meta_file)  | 62.3M  | scan2inst_train.pickle | 209M  |  
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">LAMM3D-Dataset</span>
 
-#### LAMM3D-Dataset
+<br />
 
-LAMM3D-Dataset is build on [3RScan](https://github.com/WaldJohannaU/3RScan) and [ShapeNet](https://shapenet.org). You can download them from [here](https://opendatalab.com/LAMM/LAMM/tree/main/raw/3D_Instruct).
+<p>LAMM3D-Dataset is build on <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://github.com/WaldJohannaU/3RScan" target="_blank">3RScan</a> and <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://shapenet.org" target="_blank">ShapeNet</a>. You can download them from <a style="color: #007bff; text-decoration: none; font-weight: bold;" href="https://opendatalab.com/LAMM/LAMM/tree/main/raw/3D_Instruct" target="_blank">here</a>.</p>
+<br />
+<pre>Corresponding meta file is here:</pre>
+<br />
 
-Corresponding meta file is here:
-
-|  Meta file name  | Size  |  Data file name  | Size  |  
-|  ----  | ----  | ----  | ----  | 
-|  [LAMM_3dinstruct_10k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Instruct/meta_file/LAMM_3dinstruct_10k.json)  | 19.6M  | 3rscan_pcls.zip, shapenet_pcls.zip  | 929M  |  
-
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Instruct/meta_file/LAMM_3dinstruct_10k.json">
+            LAMM_3dinstruct_10k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            19.6M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            3rscan_pcls.zip, shapenet_pcls.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            929M
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br />
 ## Directory Structure
 
-```
+<div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1rem;">
+  <pre style="margin: 0; color: #333;">
 data
 ├── LAMM
 │   ├── 2D_Instruct  
@@ -97,11 +289,14 @@ data
 │   └── ...
 │
 └── ...
-```
+    </pre>
+</div>
+<br />
 
-## Meta File Format 
-
-**2D instruction tuning data**
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">Meta File Format</span>
+<br />
+<strong>2D instruction tuning data</strong>
+<br />
 
 ```json
 [
@@ -115,7 +310,9 @@ data
         },
         {
             "from": "gpt",  # response
-            "value": "The kitchen in the image is furnished with white cabinets and white   appliances. There is a dishwasher, a stove, and a sink. On the stove, a blue towel    hangs on the handle. A cutting board is placed on the dishwasher. There are also   additional elements like a bowl of apples on the counter and a beige rug on the floor."
+            "value": "The kitchen in the image is furnished with white cabinets and white appliances. There is a dishwasher, a stove, 
+            and a sink. On the stove, a blue towel hangs on the handle. A cutting board is placed on the dishwasher. There are also 
+            additional elements like a bowl of apples on the counter and a beige rug on the floor."
         }
     ],
     "task_type": "conversation",  # task type
@@ -127,7 +324,9 @@ data
 ]
 ```
 
-**3D instruction instruction data**
+<br />
+<strong>3D instruction tuning data</strong>
+<br />
 
 ```json
 [
@@ -136,11 +335,12 @@ data
         "conversations": [
                 {
                     "from": "human",
-                    "value": "What scenario does this point cloud belong to according to the    model\u2019s prediction?"
+                    "value": "What scenario does this point cloud belong to according to the model\u2019s prediction?"
                 },
                 {
                     "from": "gpt",
-                    "value": "Through meticulous analysis, it becomes evident that the point cloud  aligns with the characteristics of sofa,couch,lounge s       cenario."
+                    "value": "Through meticulous analysis, it becomes evident that the point cloud aligns with the characteristics of sofa,
+                    couch, lounge scenario."
                 }
             ],
         "task_type": "classification3d",

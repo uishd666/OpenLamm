@@ -2,48 +2,90 @@
 title: 'Default Benchmark'
 sidebar_position: 1
 ---
+# <span style="font-size: 2.5rem; font-weight: bold; color: #333;" class="leading-loose">Default Benchmark</span>
+<br />
 
-## LAMM-Benchmark
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">LAMM-Benchmark</span>
+<br />
 
 ![LAMM Benchmark](/images/lamm-benchmark.png)
 
-<p style="font-size: 1.25rem;">
-**Notes**: LAMM-Benchmark has now been fully implemented using ChEF, and we highly recommend using the latest ChEF evaluation method for benchmarking in your work. ChEF supports the common 2D and 3D tasks evaluation and locating tasks evaluation in LAMM. Please note that the GPT rank metric in LAMM is no longer applicable.
-</p>
+<br />
+<div style="font-size: 0.8rem;color: grey;">
+<em style="color:black">**Notes**</em>: LAMM-Benchmark has now been fully implemented using ChEF, and we highly recommend using the latest ChEF evaluation method for benchmarking in your work. ChEF supports the common 2D and 3D tasks evaluation and locating tasks evaluation in LAMM. Please note that the GPT rank metric in LAMM is no longer applicable.
+</div>
+
+<br />
 
 <p style="font-size: 1.25rem;">
 To evaluate LAMM/Octavius on LAMM-Benchmark in 2D common tasks, use the pre-defined model config (<code>src/config/ChEF/models/lamm.yaml</code> or <code>src/config/ChEF/models/octavius_2d+3d.yaml</code>) and the pre-defined recipes config (<code>src/config/ChEF/scenario_recipes/LAMM/</code>).
 </p>
 
+<br />
+
 <pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
-<code>python eval.py --model_cfg config/ChEF/models/lamm.yaml  --recipe_cfg config/ChEF/scenario_recipes/LAMM/ScienceQA.yaml</code>
+<code>
+```bash
+python eval.py --model_cfg config/ChEF/models/lamm.yaml  --recipe_cfg config/ChEF/scenario_recipes/LAMM/ScienceQA.yaml
+```
+</code>
 </pre>
+
+<br />
 
 <p style="font-size: 1.25rem;">
 If you want to automately running all the evaluations sequentially, you can run
 </p>
 
-<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
-<code>sh tools/LAMM/eval_lamm2d.sh</code>
-</pre>
+<br />
 
 <pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
-<code>sh tools/LAMM/eval_lamm3d.sh</code>
+<code>
+```bash
+sh tools/LAMM/eval_lamm2d.sh
+```
+</code>
 </pre>
+
+<br />
+
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```bash
+sh tools/LAMM/eval_lamm3d.sh
+```
+</code>
+</pre>
+
+<br />
 
 <p style="font-size: 1.25rem;">
 To evaluate Octavius on ScanNet Detection, run:
 </p>
 
+<br />
+
 <pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
-<code>sh tools/Octavius/octavius_ChEF.sh</code>
+<code>
+```bash
+sh tools/Octavius/octavius_ChEF.sh
+```
+</code>
 </pre>
 
-## ChEF
+<br />
+
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">ChEF</span>
+
+<br />
 
 ![ChEF Benchmark](/images/ChEF.png)
 
+<br />
+
 <h3 style="font-size: 1.5rem; font-weight: bold; margin-top: 1.5rem;">Download Evaluated MLLMs</h3>
+
+<br />
 
 <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
   <thead>
@@ -116,13 +158,15 @@ To evaluate Octavius on ScanNet Detection, run:
 Organize them as below:
 </p>
 
-<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1.125rem;">
-<code>
+<br />
+
+<div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1rem;">
+  <pre style="margin: 0; color: #333;">
 ckpt
 ├── epcl_vit-L_256tokens
 ├──
 │   ├── lamm_2d               # saved checkpoints in training
 │   └── ...
 └── ...
-</code>
-</pre>
+  </pre>
+</div>

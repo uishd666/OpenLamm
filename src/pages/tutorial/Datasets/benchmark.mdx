@@ -2,98 +2,505 @@
 title: 'Benchmarking'
 sidebar_position: 2
 ---
-
+# <span style="font-size: 2.5rem; font-weight: bold; color: #333;" class="leading-loose">Benchmark</span>
+<br />
+<p class="leading-loose">
 We provide 2D/3D/ChEF benchmarking datasets for downstream evaluation.
+</p>
 
-## 2D Benchmarking Datasets
+<br />
 
-2D Benchmarking datasets are build on [Flickr30k](https://shannon.cs.illinois.edu/DenotationGraph/), [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html), [FSC147](https://github.com/cvlab-stonybrook/LearningToCountEverything), [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), [UCMerced](http://weegee.vision.ucmerced.edu/datasets/landuse.html), [LSP](https://dbcollection.readthedocs.io/en/latest/datasets/leeds_sports_pose_extended.html), [PASCAL VOC](http://host.robots.ox.ac.uk/pascal/VOC/), [SVT](https://paperswithcode.com/dataset/svt), [AI2D](https://github.com/allenai/dqa-net) and [ScienceQA](https://scienceqa.github.io/) datasets. You can download them from [here](https://opendatalab.com/LAMM/LAMM/tree/main/raw/2D_Benchmark).
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">2D Benchmarking Datasets</span>
 
+<br />
+
+<p>2D Benchmarking datasets are build on <a href="https://shannon.cs.illinois.edu/DenotationGraph/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">Flickr30k</a>, <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">CIFAR-10</a>, <a href="https://github.com/cvlab-stonybrook/LearningToCountEverything" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">FSC147</a>, <a href="https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">CelebA</a>, <a href="http://weegee.vision.ucmerced.edu/datasets/landuse.html" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">UCMerced</a>, <a href="https://dbcollection.readthedocs.io/en/latest/datasets/leeds_sports_pose_extended.html" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">LSP</a>, <a href="http://host.robots.ox.ac.uk/pascal/VOC/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">PASCAL VOC</a>, <a href="https://paperswithcode.com/dataset/svt" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">SVT</a>, <a href="https://github.com/allenai/dqa-net" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">AI2D</a> and <a href="https://scienceqa.github.io/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">ScienceQA</a> datasets. You can download them from <a href="https://opendatalab.com/LAMM/LAMM/tree/main/raw/2D_Benchmark" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>.</p>
+<br />
+
+<pre>
 Corresponding meta file is here:
+</pre>
+<br />
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Caption_flickr30k.json"> 
+            Caption_flickr30k.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            598K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            flickr30k_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            559M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Classification_CIFAR10.json"> 
+            Classification_CIFAR10.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            2.6M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            cifar10_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            8.9M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Counting_FSC147.json"> 
+            Counting_FSC147.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            7.3M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            fsc147_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            44M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Detection_VOC2012.json"> 
+            Detection_VOC2012.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            6.4M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            voc2012_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            196M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Facial_Classification_CelebA(Hair).json"> 
+            Facial_Classification_CelebA(Hair).json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            2.4M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            celeba_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            566M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Facial_Classification_CelebA(Smile).json"> 
+            Facial_Classification_CelebA(Smile).json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            3.7M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            celeba_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            566M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Fine-grained_Classification_UCMerced.json"> 
+            Fine-grained_Classification_UCMerced.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            676K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            ucmerced_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            317M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Keypoints_Detection_LSP.json"> 
+            Keypoints_Dectection_LSP.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            3.9M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            lsp_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            44M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Locating_FSC147.json"> 
+            Locating_FSC147.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            7.5M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            fsc147_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            44M
+        </td>
+    </tr>
+        <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Locating_LSP.json">  
+            Locating_LSP.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            3.9M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            lsp_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            9.9M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Locating_VOC2012.json">  
+            Locating_VOC2012.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            6.0M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            voc2012_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            196M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/OCR_SVT.json">  
+            OCR_SVT.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            68K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            svt_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            82M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/VQA_AI2D.json">  
+            VQA_AI2D.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            2.1M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            ai2d_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            559M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/VQA_SQAimage.json">  
+            VQA_SQAimage.json
+            </a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            3.6M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            sqaimage_images.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            127M
+        </td>
+    </tr>
+    </tbody>
+</table>
 
-|  Meta file name  | size  |  Data file name | size |  
-|  ----  | ----  |  ----  | ----  |  
-| [Caption_flickr30k.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Caption_flickr30k.json)  | 598K | flickr30k_images.zip | 559M |     
-| [Classification_CIFAR10.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Classification_CIFAR10.json)  | 2.6M | cifar10_images.zip  | 8.9M  |  
-| [Counting_FSC147.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Counting_FSC147.json) | 7.3M | fsc147_images.zip   |  44M |  
-| [Detection_VOC2012.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Detection_VOC2012.json) | 6.4M | voc2012_images.zip  | 196M  |  
-| [Facial_Classification_CelebA(Hair).json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Facial_Classification_CelebA(Hair).json) | 2.4M | celeba_images.zip  |  566M |  
-| [Facial_Classification_CelebA(Smile).json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Facial_Classification_CelebA(Smile).json) | 3.7M |  celeba_images.zip  |  566M |  
-| [Fine-grained_Classification_UCMerced.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Fine-grained_Classification_UCMerced.json) | 676K | ucmerced_images.zip  | 317M  |  
-| [Keypoints_Dectection_LSP.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Keypoints_Detection_LSP.json) | 3.9M |  lsp_images.zip   |  44M |   
-| [Locating_FSC147.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Locating_FSC147.json) | 7.5M | fsc147_images.zip   |  44M |  
-| [Locating_LSP.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Locating_LSP.json) | 3.9M | lsp_images.zip  |  9.9M |  
-| [Locating_VOC2012.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/Locating_VOC2012.json) | 6.0M | voc2012_images.zip  | 196M  |  
-| [OCR_SVT.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/OCR_SVT.json) | 68K |  svt_images.zip  | 82M  |  
-| [VQA_AI2D.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/VQA_AI2D.json) | 2.1M | ai2d_images.zip  | 559M  |  
-| [VQA_SQAimage.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/2D_Benchmark/meta_file/VQA_SQAimage.json) | 3.6M |  sqaimage_images.zip  | 127M  |
-
-## 3D Benchmarking Datasets
-
+<br />
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">3D Benchmarking Datasets</span>
+<br />
+<p>
 We provide two 3D benchmarking datasets, "Scan2Inst-benchmark" and "LAMM3D-Dataset-benchmark".
+</p>
+<br />
 
-#### Scan2Inst-benchmark
-
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Scan2Inst-benchmark</span>
+<br />
+<p>
 If your MLLMs are trained with "Scan2Inst", you should use "Scan2Inst-benchmark" for evaluation.
-
-We provide [NR3D](https://referit3d.github.io/) and [ShapeNet](https://shapenet.org/) for zero-shot evaluation, and [ScanNet](http://www.scan-net.org) for finetuning evaluation. You can download processed pickle file from [here](https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_3D/3D_Benchmark/meta_file).
-
+</p>
+<br />
+<p>We provide <a href="https://referit3d.github.io/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">NR3D</a> and <a href="https://shapenet.org/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">ShapeNet</a> for zero-shot evaluation, and <a href="http://www.scan-net.org" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">ScanNet</a> for finetuning evaluation. You can download processed pickle file from <a href="https://opendatalab.com/LAMM/OctaviusDataset/tree/main/OctaviusDataset_3D/3D_Benchmark/meta_file" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>.</p>
+<br />
+<pre>
 Corresponding meta file is here:
+</pre>
+<br />
 
-|  Meta file name  | size  |  Data file name  | size  |  
-|  ----  | ----  |  ----  | ----  |   
-|  [Caption_nr3d.json](https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Caption_nr3d.json)  | 2.28M  | Caption_nr3d.pickle  | 25.41M  | 
-|  [Caption_scannet.json](https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Caption_scannet.json)  | 239.43K  | Caption_scannet.pickle  | 7.29M  | 
-|  [Classification_scannet.json](https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Classification_scannet.json)  | 249.80 K  | Classification_scannet.pickle  | 7.38M  |
-|  [Classification_shapenet.json](https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Classification_shapenet.json)  | 1.09M  | Classification_shapenet.pickle  | 21.45M  |
-|  [VQA_scannet.json](https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/VQA_scannet.json)  | 231.64K  | VQA_scannet.pickle  | 4.82M  |
-
-#### LAMM3D-Dataset-benchmark
-
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Caption_nr3d.json">Caption_nr3d.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            2.28M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            Caption_nr3d.pickle
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            25.41M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Caption_scannet.json">Caption_scannet.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            239.43K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            Caption_scannet.pickle
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            7.29M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Classification_scannet.json">Classification_scannet.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            249.80K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            Classification_scannet.pickle
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            7.38M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/Classification_shapenet.json">Classification_shapenet.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            1.09M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            Classification_shapenet.pickle
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            21.45M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://opendatalab.com/LAMM/OctaviusDataset/blob/main/OctaviusDataset_3D/3D_Benchmark/meta_file/VQA_scannet.json">VQA_scannet.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            231.64K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            VQA_scannet.pickle
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            4.82M
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br />
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">LAMM3D-Dataset-benchmark</span>
+<br />
+<p>
 If your MLLMs are trained with "LAMM3D-Dataset", you should use "LAMM3D-Dataset-benchmark" for evalution.
+</p>
 
-LAMM3D-Dataset-benchmark is build on [ScanNet](http://www.scan-net.org/). You can download them from [here](https://opendatalab.com/LAMM/LAMM/tree/main/raw/3D_Instruct).
+<br />
 
+<p>
+LAMM3D-Dataset-benchmark is build on <a href="http://www.scan-net.org/" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">ScanNet</a>. You can download them from <a href="https://opendatalab.com/LAMM/LAMM/tree/main/raw/3D_Instruct" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">here</a>.
+</p>
+
+<br />
+
+<pre>
 Corresponding meta file is here:
+</pre>
 
-|  Meta file name  | size  |  Data file name  | size  |  
-|  ----  | ----  |  ----  | ----  |   
-|  [Detection_ScanNet.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Benchmark/meta_file/Detection_ScanNet.json)  | 1.7M  | scannet_pcls.zip  | 246M  | 
-|  [VG_ScanRefer.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Benchmark/meta_file/VG_ScanRefer.json)  | 3.7M  | scannet_pcls.zip  | 246M  | 
-|  [VQA_ScanQA_multiplechoice.json](https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Benchmark/meta_file/VQA_ScanQA_multiplechoice.json)  | 859K  | scannet_pcls.zip  | 246M  |
+<br />
 
-## ChEF Benchmarking Dataset
+<table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.125rem;">
+    <thead>
+    <tr>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Meta file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Data file name</th>
+        <th style="border-bottom: 1px solid #ddd; padding: 12px; text-align: left; color: #666; font-weight: 600;">Size</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Benchmark/meta_file/Detection_ScanNet.json">Detection_ScanNet.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            1.7M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            scannet_pcls.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            246M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Benchmark/meta_file/VG_ScanRefer.json">VG_ScanRefer.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            3.7M
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            scannet_pcls.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            246M
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            <a style="color: #007bff; text-decoration: none; font-weight: 500;" href="https://huggingface.co/datasets/openlamm/LAMM_Dataset/blob/main/3D_Benchmark/meta_file/VQA_ScanQA_multiplechoice.json">VQA_ScanQA_multiplechoice.json</a>
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            859K
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            scannet_pcls.zip
+        </td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd;">
+            246M
+        </td>
+    </tr>
+    </tbody>
+</table>
 
-#### Omnibenchmark
+<br />
 
-Download [Omnibenchmark](https://entuedu-my.sharepoint.com/:f:/g/personal/yuanhan002_e_ntu_edu_sg/El2wmbzutJBOlu8Tz9HyDJABMmFtsG_8mq7uGh4Q7F1QSQ?e=NyroDS) for fine-grained classification dataset and [Bamboo Label System](https://github.com/ZhangYuanhan-AI/Bamboo) for hierarchical catergory labels. 
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">ChEF Benchmarking Dataset</span>
 
+<br />
+
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Omnibenchmark</span>
+
+<br />
+
+<p>Download <a href="https://entuedu-my.sharepoint.com/:f:/g/personal/yuanhan002_e_ntu_edu_sg/El2wmbzutJBOlu8Tz9HyDJABMmFtsG_8mq7uGh4Q7F1QSQ?e=NyroDS" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">Omnibenchmark</a> for fine-grained classification dataset and <a href="https://github.com/ZhangYuanhan-AI/Bamboo" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">Bamboo Label System</a> for hierarchical catergory labels. </p>
+
+<br />
+
+<p>
 We sampled and labeled Omnibenchmark meticulously by using a hierarchical chain of categories, facilitated by the Bamboo label system. 
+</p>
 
-```shell
-python ChEF/data_process/Omnibenchmark.py
-```
+<br />
 
-You can also directly download the labeled Omnibenchmark dataset from [OpenXLab](https://openxlab.org.cn/datasets/LAMM/ChEF).
+<div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1rem;">
+    <pre>
+    python ChEF/data_process/Omnibenchmark.py
+    </pre>
+</div>
 
+<br />
 
+<p>
+You can also directly download the labeled Omnibenchmark dataset from <a href="https://openxlab.org.cn/datasets/LAMM/ChEF" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">OpenXLab</a>.
+</p>
 
-#### MMBench, MME and SEEDBench
+<br />
 
-Refer to [MMBench](https://github.com/open-compass/MMBench), [MME](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models) and [SEEDBench](https://github.com/AILab-CVC/SEED-Bench) for dataset and more details.
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">MMBench, MME and SEEDBench</span>
 
+<br />
 
-#### POPE
+<p>
+Refer to <a href="https://github.com/open-compass/MMBench" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">MMBench</a>, <a href="https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">MME</a> and <a href="https://github.com/AILab-CVC/SEED-Bench" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">SEEDBench</a> for dataset and more details.
+</p>
 
-POPE is a special labeled COCO dataset for hallucination evaluation based on the validation set of COCO 2014. Download [COCO](https://cocodataset.org/#download) and [POPE](https://github.com/RUCAIBox/POPE).
+<br />
 
-#### MMBench_C and ScienceQA_C
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">POPE</span>
 
-MMBench_C and ScienceQA_C are datasets with image and text corruptions fot robustness evaluation. You can also directly download the MMBench_C and ScienceQA_C dataset from [OpenXLab](https://openxlab.org.cn/datasets/LAMM/ChEF).
+<br />
 
-## Directory Structure
+<p>POPE is a special labeled COCO dataset for hallucination evaluation based on the validation set of COCO 2014. Download <a href="https://cocodataset.org/#download" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">COCO</a> and <a href="https://github.com/RUCAIBox/POPE" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">POPE</a>.</p>
 
-```text
+<br />
+
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">MMBench_C and ScienceQA_C</span>
+
+<br />
+
+<p>MMBench_C and ScienceQA_C are datasets with image and text corruptions fot robustness evaluation. You can also directly download the MMBench_C and ScienceQA_C dataset from <a href="https://openxlab.org.cn/datasets/LAMM/ChEF" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">OpenXLab</a>.</p>
+
+<br />
+
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">Directory Structure</span>
+<br />
+<div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; font-size: 1rem;">
+  <pre style="margin: 0; color: #333;">
 data
 ├── ChEF
 |   │── Omnibenchmark_Bamboo  
@@ -122,4 +529,5 @@ data
 |   ├── coco_pope_popular.json
 |   └── coco_pope_random.json
 └── ...
-```
+    </pre>
+</div>

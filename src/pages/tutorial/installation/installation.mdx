@@ -2,88 +2,173 @@
 title: 'Installation'
 sidebar_position: 3
 ---
+# <span style="font-size: 2.5rem; font-weight: bold; color: #333;" class="leading-loose">Installation</span>
+<br />
 
-## Training
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;">Training</span>
+<br />
 
-Pre-requist Packages: `gcc <= 7.5.0; nvcc >= 11.1`
+<pre>
+Pre-requist Packages: <span style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; font-family: 'Courier New', Courier, monospace;">`gcc <= 7.5.0; nvcc >= 11.1`</span>
+</pre>
 
-#### Python & Pytorch Environment
+<br />
 
-    ```bash
-    conda create -n lamm python=3.10 -y
-    conda activate lamm
-    # Choose different version of torch according to your 
-    conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
-    ```
+<strong>Python & Pytorch Environment</strong>
 
-#### Install Required Dependencies
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```bash
+conda create -n lamm python=3.10 -y
+conda activate lamm
+# Choose different version of torch according to your 
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+```
+</code>
+</pre>
 
-    ```bash
-    conda install timm==0.6.7 deepspeed==0.9.3 transformers==4.31.0 -c conda-forge
-    pip install peft==0.3.0 --no-dependencies
-    pip install -r requirements/default.txt
+<br />
 
-    ```
-    Install Faiss 
-    ```bash
-    # if cuda is available
-    conda install -c conda-forge faiss-gpu
-    # otherwise
-    conda install -c conda-forge faiss-cpu
-    ```
-    Download required NLTK data
+<strong>Install Required Dependencies</strong>
 
-    ```python
-    import nltk
-    nltk.download('stopwords')
-    nltk.download('punkt')
-    nltk.download('wordnet')
-    ```
 
-#### Optional Dependencies
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```bash
+conda install timm==0.6.7 deepspeed==0.9.3 transformers==4.31.0 -c conda-forge
+pip install peft==0.3.0 --no-dependencies
+pip install -r requirements/default.txt
+```
+</code>
+</pre>
 
-    * LAMM-3D Environments
+<br />
 
-        ```bash
-        cd src/model/EPCL/third_party/pointnet2/
-        python setup.py install
-        cd ../../utils/
-        pip install cython
-        python cython_compile.py build_ext --inplace
-        ```
+<strong>Install Faiss</strong>
 
-    * Reducing Memory in Training
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```bash
+# if cuda is available
+conda install -c conda-forge faiss-gpu
+# otherwise
+conda install -c conda-forge faiss-cpu
+```
+</code>
+</pre>
 
-        - flash attention (v2)   
-            
-            Install flash attention (v2) if you are tight in GPU memory. Please refer to [flash attention's installation](https://github.com/Dao-AILab/flash-attention/tree/main#installation-and-features)
-            
-            > FlashAttention-2 currently supports Ampere, Ada, or Hopper GPUs (e.g., A100, RTX 3090, RTX 4090, H100).
+<br />
 
-        - xformers   
-    
-            Install xformers if you are tight in GPU memory and cannot use flash attention (e.g., using Nvidia v100). Please refer to [xformers's installation](https://github.com/facebookresearch/xformers#installing-xformers)
+<strong>Download required NLTK data</strong>
 
-## Benchmarking
-We use ChEF for benchmarking.
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```python
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+```
+</code>
+</pre>
 
+<br />
+
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Optional Dependencies</span>
+
+<br />
+
+<strong>LAMM-3D Environments</strong>
+
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```bash
+cd src/model/EPCL/third_party/pointnet2/
+python setup.py install
+cd ../../utils/
+pip install cython
+python cython_compile.py build_ext --inplace
+```
+</code>
+</pre>
+
+<br />
+
+<p style="font-weight:bold;">Reducing Memory in Training</p>
+<br />
+<strong style="text-indent:2em">
+· flash attention (v2)
+</strong>   
+<br />
+<p>
+Install flash attention (v2) if you are tight in GPU memory. Please refer to <a href="https://github.com/Dao-AILab/flash-attention/tree/main#installation-and-features" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">flash attention's installation</a>
+</p>
+
+<br />
+
+<div style="color: grey; font-size:0.8rem;">
+FlashAttention-2 currently supports Ampere, Ada, or Hopper GPUs (e.g., A100, RTX 3090, RTX 4090, H100).
+</div>
+
+<br />
+
+<strong style="text-indent:2em">
+· xformers
+</strong>   
+
+<br />
+
+<p>
+Install xformers if you are tight in GPU memory and cannot use flash attention (e.g., using Nvidia v100). Please refer to <a href="https://github.com/facebookresearch/xformers#installing-xformers" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">xformers's installation</a>
+</p>
+
+<br />
+
+## <span style="font-size: 1.8rem; font-weight: bold; color: #333;"> Benchmarking</span>
+
+<br />
+
+<pre>We use ChEF for benchmarking.</pre>
+
+<br />
+
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
 ```shell
 conda create -n ChEF python=3.10
 conda install pytorch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install -r requirements/default.txt
 pip install -r requirements/ChEF.txt
 ```
+</code>
+</pre>
 
-#### Optional Dependencies
+<br />
 
-* Efficient Inference
+#### <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Optional Dependencies</span>
 
-    - lightllm   
-        
-        Install lightllm to speed up inference and decrease the GPU memery usage to enable large batchsize.
-    
-        ```bash
-        git clone -b multimodal  https://github.com/ModelTC/lightllm.git
-        cd lightllm
-        python setup.py install
-        ```
+<br />
+
+<p style="font-weight:bold;">Efficient Inference</p>
+
+<br />
+
+<strong style="text-indent:2em">
+· lightllm 
+</strong>
+
+<br />
+
+Install lightllm to speed up inference and decrease the GPU memery usage to enable large batchsize.
+
+<br />
+
+<pre style="background-color: #2d2d2d; color: #f8f8f2; padding: 16px; border-radius: 8px;">
+<code>
+```bash
+git clone -b multimodal  https://github.com/ModelTC/lightllm.git
+cd lightllm
+python setup.py install
+```
+</code>
+</pre>
